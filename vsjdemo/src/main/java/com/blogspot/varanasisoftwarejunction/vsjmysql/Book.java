@@ -21,7 +21,8 @@ public class Book {
 	private String subject;
 	private Integer price;
 
-	@OneToMany(mappedBy = "book")
+	@OneToMany()
+	@JoinColumn(name = "book_id")
 	private List<Reader> readerList;
 	public Integer getId() {
 		return id;

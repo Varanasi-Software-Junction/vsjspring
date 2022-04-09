@@ -25,6 +25,7 @@ public class Reader {
     }
 
     @ManyToOne
+    @JoinColumn(name="book_id", nullable=false)
     @JsonBackReference
     private Book book;
 
